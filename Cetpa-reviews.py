@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 from selenium import webdriver 
 from bs4 import BeautifulSoup 
 driver = webdriver.Chrome("C:\\usr\\chromedriver") 
@@ -34,8 +33,7 @@ for i in range(0,8):
     time = soup.find_all('span',{'class':'section-review-publish-date'})
     time_text = time[i].text
     Time.append(time_text)    
-    
-    
+      
 for i in range(0,8):
     rated_star = soup.find_all('span',{'class':'section-review-stars'})
     star = rated_star[i]
@@ -94,7 +92,6 @@ from sklearn.metrics import precision_score,recall_score,f1_score
 precision_score(y,y_pred)
 recall_score(y,y_pred)
 f1_score(y,y_pred)
-
 
 log_reg.predict(X[[4]])
 
